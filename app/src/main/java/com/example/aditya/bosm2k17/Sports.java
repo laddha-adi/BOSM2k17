@@ -44,7 +44,7 @@ public class Sports {
         fixtureSportsDataList = new ArrayList<>();
 
 
-       for(int i=0;i<26;i++) {
+       for(int i=0;i<27;i++) {
            List<String> nullList = new ArrayList<>();
            SportsRoundList.add(nullList);
            List<NonFixtureSportsData> nullList2 = new ArrayList<>();
