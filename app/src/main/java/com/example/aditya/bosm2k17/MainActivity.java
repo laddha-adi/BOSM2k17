@@ -31,44 +31,43 @@ public class MainActivity extends AppCompatActivity {
        final List<Integer> NonFixtures= new ArrayList<>();
 
         Fixtures.add(0,1);
-        NonFixtures.add(1,2);
-        NonFixtures.add(2,3);
-        Fixtures.add(3,4);
-        Fixtures.add(4,5);
-        Fixtures.add(5,6);
-        NonFixtures.add(6,7);
-        NonFixtures.add(7,8);
-        Fixtures.add(8,9);
-        Fixtures.add(9,10);
-        NonFixtures.add(10,11);
-        Fixtures.add(11,12);
-        Fixtures.add(12,13);
-        Fixtures.add(13,14);
-        Fixtures.add(14,15);
-        Fixtures.add(15,16);
-        Fixtures.add(16,17);
-        Fixtures.add(17,18);
-        Fixtures.add(18,19);
-        NonFixtures.add(19,20);
-        Fixtures.add(20,21);
-        Fixtures.add(21,22);
-        Fixtures.add(22,23);
-        NonFixtures.add(23,24);
-        Fixtures.add(24,25);
-        Fixtures.add(25,26);
-        Fixtures.add(26,27);
+        NonFixtures.add(0,2);
+        NonFixtures.add(1,3);
+        Fixtures.add(1,4);
+        Fixtures.add(2,5);
+        Fixtures.add(3,6);
+        NonFixtures.add(2,7);
+        NonFixtures.add(3,8);
+        Fixtures.add(4,9);
+        Fixtures.add(5,10);
+        NonFixtures.add(4,12);
+        Fixtures.add(6,13);
+        Fixtures.add(7,14);
+        Fixtures.add(8,15);
+        Fixtures.add(9,16);
+        Fixtures.add(10,17);
+        Fixtures.add(11,18);
+        Fixtures.add(12,19);
+        Fixtures.add(13,20);
+        NonFixtures.add(5,21);
+        Fixtures.add(14,22);
+        Fixtures.add(15,23);
+        Fixtures.add(16,24);
+        NonFixtures.add(5,25);
+        Fixtures.add(17,26);
+       // Fixtures.add(18,27);
+      //  Fixtures.add(19,27);
 
         // Fixtures.add(1,3);
 
-             NonFixtures.add(0,2);
-             NonFixtures.add(1,3);
+
 
         pDialog = new ProgressDialog(this);
         pDialog.setTitle("fetching data from server");
         pDialog.setMessage("Loading...");
         pDialog.show();
-        pDialog.setCanceledOnTouchOutside(false);
-        pDialog.setCancelable(false);
+       pDialog.setCanceledOnTouchOutside(false);
+       pDialog.setCancelable(false);
 
         mDatabase   = FirebaseDatabase.getInstance().getReference().child("Schedule");
         sports = new Sports();
@@ -171,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     }
                 Data.onDataChanged();
+                printData();
                 }
 
 
@@ -181,5 +181,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }}
+    }
+void printData(){
+  //  Log.e("f0uckedUp",sports.getFixtureSportsDataList().toString());
+}}
 
